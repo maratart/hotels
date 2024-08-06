@@ -3,7 +3,7 @@ package days
 import "time"
 
 func Between(from time.Time, to time.Time) []time.Time {
-	if from.After(to) || from.Equal(to) {
+	if from.After(to) || from.Equal(to) || to.Before(from) {
 		return nil
 	}
 
